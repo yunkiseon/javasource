@@ -5,11 +5,11 @@ public class OperatorEx2 {
 
         int a = 10, b = 4;
         System.out.printf("%d + %d = %d\n", a, b, a + b);
-        System.out.printf("%d + %d = %d\n", a, b, a - b);
-        System.out.printf("%d + %d = %d\n", a, b, a * b);
-        System.out.printf("%d + %d = %d\n", a, b, a / b); // 2
-        System.out.printf("%d + %% = %d\n", a, b, a % b); // 나머지 출력
-        System.out.printf("%d + %f = %f\n", a, (float) b, a / (float) b); // 2.5
+        System.out.printf("%d - %d = %d\n", a, b, a - b);
+        System.out.printf("%d * %d = %d\n", a, b, a * b);
+        System.out.printf("%d / %d = %d\n", a, b, a / b); // 2
+        System.out.printf("%d % %% = %d\n", a, b, a % b); // 나머지 출력
+        System.out.printf("%d / %f = %f\n", a, (float) b, a / (float) b); // 2.5
 
         // 서로 다른 타입의 연산결과는 큰 타입을 따라간다
         // int/int -> int

@@ -33,6 +33,7 @@ public class IfEx3 {
                 opt = '-';
             }
         } else if (jumsu >= 80) {
+            grade = 'B';
             if (jumsu >= 88) {
                 opt = '+';
             } else if (jumsu < 85) {
