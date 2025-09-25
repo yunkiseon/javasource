@@ -13,5 +13,6 @@ public class OperatorEx8 {
         // System.out.println(num % 2 == 0 ? "짝수" : "홀수");
         String result = num % 2 == 0 ? "짝수" : "홀수";
         System.out.println(result);
+        sc.close();
     }
 }

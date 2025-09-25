@@ -11,5 +11,6 @@ public class OperatorEx7 {
 
         // 입력받은 숫자가 양수, 음수인지 출력하기
         System.out.println(num > 0 ? "양수" : "음수");
+        sc.close();
     }
 }

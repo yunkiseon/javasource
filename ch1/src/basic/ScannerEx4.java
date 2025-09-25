@@ -21,7 +21,6 @@ public class ScannerEx4 {
         String op = sc.nextLine();
         System.out.print("두번째 숫자 입력 : ");
         int input2 = Integer.parseInt(sc.nextLine());
-        System.out.println(op);
         System.out.println(input1 + input2);
         sc.close();
     }

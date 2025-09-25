@@ -13,5 +13,6 @@ public class ScannerEx2 {
         int input = Integer.parseInt(num);
         System.out.println("input = " + input);
         System.out.println("input = " + (input + 1));
+        sc.close();
     }
 }

@@ -44,6 +44,6 @@ public class IfEx3 {
         }
         // 당신의 학점은 A+ 입니다
         System.out.printf("당신의 학점은 %c%c 입니다", grade, opt);
-
+        sc.close();
     }
 }

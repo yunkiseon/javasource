@@ -24,6 +24,7 @@ public class IfEx1 {
             System.out.println("불합격입니다");
         }
         System.out.println(jumsu >= 60 ? "합격입니다" : "불합격입니다");
+        sc.close();
 
     }
 }
