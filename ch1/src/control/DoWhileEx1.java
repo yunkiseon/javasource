@@ -27,5 +27,6 @@ public class DoWhileEx1 {
             }
         } while (answer != num);
         System.out.println("정답입니다");
+        sc.close();
     }
 }

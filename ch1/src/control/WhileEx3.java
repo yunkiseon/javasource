@@ -21,5 +21,6 @@ public class WhileEx3 {
             }
         }
         System.out.println("합계 : " + sum);
+        sc.close();
     }
 }

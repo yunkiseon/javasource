@@ -22,5 +22,6 @@ public class WhileEx2 {
 
         }
         System.out.println("각 자릿 수 합 " + sum);
+        sc.close();
     }
 }
