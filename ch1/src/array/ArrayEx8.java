@@ -21,8 +21,8 @@ public class ArrayEx8 {
         // int [][] arr2 = new int[3][]; //행은 3이지만, 열은 비고정 ex) 1행은 열이 2, 2행은 3열, 3행은 2열.
         // 처럼 가변적으로 하고 싶을 때 사용
         // arr2[0] = new int[2];
-        // arr2[2] = new int[3];
-        // arr2[3] = new int[2];
+        // arr2[1] = new int[3];
+        // arr2[2] = new int[2];
 
         int[][] jumsu = {
                 { 100, 100, 100 },
