@@ -13,7 +13,8 @@ public class BonusPointAccount extends Account {
     void deposit(long amount) {
         // 예금한다(부모꺼호출)
         super.deposit(amount);
-        bonusPoint += (int) (amount * 0.01);
+        int point = (int) (amount * 0.01);
+        bonusPoint += point;
         // 보너스포인트 적립
         // 예금액 1%
 

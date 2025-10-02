@@ -9,15 +9,15 @@ public class AccountEx {
         // 입금 후 잔액
         System.out.println("잔액 : " + checkingAccount.getBalance());
 
-        BonusPointAccount bonusPointAccount = new BonusPointAccount("222", "성춘향", 200000, 0);
-        bonusPointAccount.deposit(100000);
-        System.out.println("예금잔액 잔액 : " + bonusPointAccount.getBalance());
-        System.out.println("보너스포인트 : " + bonusPointAccount.getBonusPoint());
+        CreditLineAccount creditLineAccount = new CreditLineAccount("111", "홍길동", 100000, 5000000);
+        System.out.println(" 잔액 : " + creditLineAccount.withdraw(3000000));
+        // System.out.println(" 잔액 : " + creditLineAccount.withdraw(3000000));
 
-        CreditLineAccount creditLineAccount = new CreditLineAccount("333", "장기하", 1000000, 5000000);
-        creditLineAccount.withdraw(2000000);
-        System.out.printf("마이너스통장 출금 가능액 : %d, 마이너스통장 잔액 : %d", creditLineAccount.getCreditLine(),
-                creditLineAccount.getBalance());
+        BonusPointAccount bonusPointAccount = new BonusPointAccount("111", "홍길동", 0, 0);
+        bonusPointAccount.deposit(100000);
+        System.out.println("현재 보너스포인트 : " + bonusPointAccount.getBonusPoint());
+        bonusPointAccount.deposit(200000);
+        System.out.println("현재 보너스포인트 : " + bonusPointAccount.getBonusPoint());
         // 직불카드 사용
         // try {
         // System.out.println("체크카드 지불 후 잔액 : " + checkingAccount.pay("111-22",
@@ -26,6 +26,13 @@ public class AccountEx {
         // // TODO Auto-generated catch block
         // e.printStackTrace();
         // }
+        CheckingTrafficCardAccount cardAccount = new CheckingTrafficCardAccount("111", "홍길동", 100000, "222", false);
+        CheckingTrafficCardAccount cardAccount2 = new CheckingTrafficCardAccount("333", "성춘향", 100000, "444", true);
+        // cardAccount.deposit(10000);
+        // System.out.println("출금 후 잔액 " + cardAccount.payTrafficCard("222", 10000));
+        cardAccount2.deposit(10000);
+        System.out.println("출금 후 잔액 " + cardAccount2.withdraw(50000));
+        System.out.println("교통비 지급 후 잔액 " + cardAccount2.payTrafficCard("444", 2100));
 
     }
 }

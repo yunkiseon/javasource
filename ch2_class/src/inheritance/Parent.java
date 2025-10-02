@@ -2,6 +2,7 @@ package inheritance;
 
 public class Parent {
     int age;
+    String name;
 
     public Parent() {
     }

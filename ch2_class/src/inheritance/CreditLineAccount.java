@@ -1,9 +1,9 @@
 package inheritance;
 
 public class CreditLineAccount extends Account {
-    private long creditLine;
+    private int creditLine;
 
-    public CreditLineAccount(String accountNo, String owener, long balance, long creditLine) {
+    public CreditLineAccount(String accountNo, String owener, long balance, int creditLine) {
         super(accountNo, owener, balance);
         this.creditLine = creditLine;
     }
@@ -12,22 +12,11 @@ public class CreditLineAccount extends Account {
     // 출금한다 -> 마이너스 한도까지 추가 출금 -> 오버라이딩 withdraw
     @Override
     long withdraw(long amount) throws Exception {
-        long creditLineAccount = getBalance() + creditLine;
-        if (amount > creditLineAccount) {
-            throw new Exception("잔액부족");
+        if (amount > super.getBalance() + creditLine) {
+            throw new Exception("마이너스 한도 확인");
         }
-        if (amount <= getBalance()) {
-            return super.withdraw(amount);
-        } else {
-            long remain = amount - getBalance();
-            setBalance(0);
-            creditLine -= remain;
-            return getBalance();
-        }
-
+        setBalance(getBalance() - amount);
+        return super.getBalance();
     }
 
-    public long getCreditLine() {
-        return creditLine;
-    }
 }

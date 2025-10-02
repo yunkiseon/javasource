@@ -2,8 +2,6 @@ package object;
 
 import java.util.Scanner;
 
-import array.solo;
-
 public class AccountEx3 {
     static Scanner sc = new Scanner(System.in);// 이렇게 클래스 열자마자 입력되는 멤버변수로 지정하면 각 메소드마다 입력할 필요는 없다.
 

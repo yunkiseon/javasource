@@ -11,7 +11,7 @@ public class ChildEx {
         child.play();
         child.list();
         child2.list();
-        System.out.println("child2 " + child2.age);
+        System.out.println("name " + child.name);
 
     }
 }
