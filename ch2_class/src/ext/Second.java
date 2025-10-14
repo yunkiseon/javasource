@@ -6,7 +6,7 @@ public class Second extends Parent {
     Parent parent = new Parent();
 
     public void info() {
-        // super.name = "서우";//not visible
+        // super.name = "성춘향";//not visible
         super.grade = "B";
         parent.getNum1();
     }
