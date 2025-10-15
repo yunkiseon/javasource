@@ -41,6 +41,7 @@ public class ObjectEx {
         // value.java에 if 구문을 한 뒤엔 true로 출력된다.
         System.out.println(value1);// lang.Value@4f023edb value.java에서 toString 오버라이딩 뒤엔 10출력됨
         System.out.println("str3 " + str3);// Hello 라는 값출력
+        sc.close();
 
     }
 

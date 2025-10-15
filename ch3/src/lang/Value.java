@@ -9,7 +9,7 @@ public class Value {
 
     @Override
     public boolean equals(Object obj) {
-        // obj rj Value 의 instance 여부 확인 후 형변환해야한다. 에러가 날 수도 있기 때문이다.
+        // obj Value 의 instance 여부 확인 후 형변환해야한다. 에러가 날 수도 있기 때문이다.
         if (obj instanceof Value) {
             Value v = (Value) obj;
             if (this.value == v.value) {
