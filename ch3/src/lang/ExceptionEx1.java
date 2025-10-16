@@ -11,12 +11,15 @@ package lang;
 // Error
 public class ExceptionEx1 {
     public static void main(String[] args) {
-        System.out.println(4 / 0); // java.lang.ArithmeticException: / by zero
-
-        try {// 예외가 발생할 수 있는 코드 작성
-            Class.forName(null);
-        } catch (ClassNotFoundException e) {// 발생하면, 개발자 확인용
+        // System.out.println(4 / 0); // java.lang.ArithmeticException: / by zero
+        try {
+            findClass();
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        } // 컴파일 예외의 예시. 바로 붉은 줄이 생김
+        }
+    }
+
+    public static void findClass() throws ClassNotFoundException {
+        Class.forName("null");
     }
 }
