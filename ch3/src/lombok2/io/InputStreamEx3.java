@@ -9,7 +9,7 @@ import java.io.OutputStream;
 
 public class InputStreamEx3 {
     public static void main(String[] args) {
-
+        System.out.println("start");
         try (InputStream in = new FileInputStream("c:\\temp\\img1.jpg");
                 OutputStream out = new FileOutputStream("c:\\temp\\copy1.jpg");) {
 
