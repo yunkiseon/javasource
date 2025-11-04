@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class JDBCUtil {
 
-    // static 블록
+    // static 블록 -> new 없어도 그냥 실행되어있음
     static {
         try {
             Class.forName("oracle.jdbc.OracleDriver");
@@ -17,8 +17,8 @@ public class JDBCUtil {
         }
     }
 
-    // 데이터베이스 연결 메소드
-    public static Connection getConnection() throws SQLException {
+    // 데이터베이스 연결 메소드 -> sta
+    public static Connection getConnection() throws SQLException { // 받으면 trycatch해야함
         String url = "jdbc:oracle:thin:@localhost:1521:xe";
         String user = "javadb";
         String password = "12345";

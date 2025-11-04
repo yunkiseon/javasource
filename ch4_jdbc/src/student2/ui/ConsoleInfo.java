@@ -4,8 +4,123 @@ import java.util.List;
 import java.util.Scanner;
 
 import student2.dto.DeptDTO;
+import student2.dto.ProfessorDTO;
+import student2.dto.StudentDTO;
 
 public class ConsoleInfo {
+
+    // 새 학생 정보 입력 받기
+    public StudentDTO insertStudent(Scanner sc) {
+        System.out.println("학생 번호 >> ");
+        String stuId = sc.nextLine();
+        System.out.println("학생 이름 >> ");
+        String name = sc.nextLine();
+        System.out.println("키 >> ");
+        Double height = Double.parseDouble(sc.nextLine());
+        System.out.println("학과코드 >> ");
+        String deptId = sc.nextLine();
+        return new StudentDTO(stuId, name, height, deptId);
+    }
+
+    public StudentDTO updateStudent(Scanner sc) {
+
+        System.out.println("학생 번호 >>");
+        String stuID = sc.nextLine();
+        System.out.println("바뀐 키 >> ");
+        Double height = Double.parseDouble(sc.nextLine());
+
+        StudentDTO sDto = new StudentDTO();
+        sDto.setStudentId(stuID);
+        sDto.setHeight(height);
+
+        return sDto; // 이렇게 하거나 StudentDTO 에서 2개짜리 생성자 만들기도 가능
+    }
+
+    public String deleteStudent(Scanner sc) {
+        System.out.println("학생 번호 >>");
+
+        String stuId = sc.nextLine();
+
+        return stuId;
+    }
+
+    public String getDepteStudent(Scanner sc) {
+        System.out.println("학과 번호 >>");
+        String deptId = sc.nextLine();
+        return deptId;
+
+    }
+
+    public String getStudentID(Scanner sc) {
+        System.out.println("학생 번호");
+        String stuId = sc.nextLine();
+        return stuId;
+
+    }
+
+    public void printStudent(StudentDTO dto) {
+        System.out.printf("%s\t%s\t%.2f\t%s", dto.getStudentId(), dto.getName(), dto.getHeight(), dto.getDeptId());
+
+    }
+
+    public void printAllStudent(List<StudentDTO> list) {
+        for (StudentDTO dto : list) {
+            System.out.printf("%s\t%s\t%.2f\t%s", dto.getStudentId(), dto.getName(), dto.getHeight(), dto.getDeptId());
+        }
+    }
+
+    // 새 교수 정보 받기
+    public ProfessorDTO insertProfessor(Scanner sc) {
+        System.out.println("아이디 입력 >> ");
+        String profId = sc.nextLine();
+        System.out.println("이름 >> ");
+        String name = sc.nextLine();
+        System.out.println("학과코드 >> ");
+        String deptId = sc.nextLine();
+        return new ProfessorDTO(profId, name, deptId);
+    }
+
+    public ProfessorDTO updateProfessor(Scanner sc) {
+        System.out.println("=====수정할 교수 정보=====");
+        System.out.println("교수번호 >>");
+        String profId = sc.nextLine();
+        System.out.println("변경할 학과코드 >> ");
+        String deptId = sc.nextLine();
+
+        ProfessorDTO professorDTO = new ProfessorDTO();
+        professorDTO.setProfID(profId);
+        professorDTO.setDeptId(deptId);
+
+        return professorDTO;
+    }
+
+    public String deleteProfessor(Scanner sc) {
+        System.out.println("=====삭제할 교수 정보=====");
+        System.out.println("교수번호 >>");
+
+        String profId = sc.nextLine();
+
+        return profId;
+
+    }
+
+    public String selectProfessor(Scanner sc) {
+        // 특정 전체 교수 조회
+        System.out.println("=====교수조회=====");
+        System.out.println("교수번호 >>");
+
+        String profId = sc.nextLine();
+
+        return profId;
+
+    }
+
+    public void prinProfessor(ProfessorDTO dto) {
+        System.out.println("교수번호 : " + dto.getProfID());
+        System.out.println("교수명 : " + dto.getProfName());
+        System.out.println("학과번호 : " + dto.getDeptId());
+    }
+
     // 학과 수정
 
     // 학과 삭제
