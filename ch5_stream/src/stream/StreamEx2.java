@@ -15,6 +15,7 @@ public class StreamEx2 {
         //foreach
         // list.forEach(null);
         list.stream().forEach((s)->System.out.println(s.getName()+ ":" + s.getJumsu()));
+        // toString 해서 가능
         list.stream().forEach(System.out::println);
     }
 }
